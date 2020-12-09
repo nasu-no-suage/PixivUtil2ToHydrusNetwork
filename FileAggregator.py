@@ -71,14 +71,17 @@ class FileAggregator:
         converted_files = list(map(Path, converted_files))
         return converted_files
 
-    def write_converted(self):
+    def write_converted(self, record_converted):
+        if record_converted == False:
+            return []
         file_path_list = self.load_file_path_list()
         with open("converted_list.json", "w") as f:
             json.dump(file_path_list, f, default=self.posix_path_default,indent=4)
 
-    def filter_out_converted(self):
+    def filter_out_converted(self, record_converted):
         '''
             exclude already converted file paths from loaded file list
+            @param record_converted switch if you record a list of converted files
         '''
         try:
             converted_files = load_converted()

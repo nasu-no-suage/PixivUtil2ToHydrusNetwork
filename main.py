@@ -10,8 +10,7 @@ config = configparser.ConfigParser()
     
 config.read('config.ini')
 base_path = Path(config['DEFAULT']['FolderPath'])
-print(config['DEFAULT']['FolderPath'])
-print(base_path.is_dir())
+convert_record = config['DEFAULT']['ConvertRecord']
 
 print("now traversing directories...")
 file_list = FileAggregator(base_path)
@@ -40,4 +39,5 @@ for pair_of_image_and_json in pairs_of_image_and_json:
     print("{0},{1}".format("now converting ", json_path))
     convert.read_json()
     convert.write_txt()
-    print(image_path)
+
+file_list.write_converted()
