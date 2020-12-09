@@ -66,14 +66,16 @@ class FileAggregator:
         return pairs_of_image_and_json
 
     def load_converted(self):
+        
+        if record_converted == False:
+            return []
+
         with open("converted_list.json") as f:
             converted_files = json.load(f)
         converted_files = list(map(Path, converted_files))
         return converted_files
 
     def write_converted(self, record_converted):
-        if record_converted == False:
-            return []
         file_path_list = self.load_file_path_list()
         with open("converted_list.json", "w") as f:
             json.dump(file_path_list, f, default=self.posix_path_default,indent=4)
