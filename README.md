@@ -4,12 +4,12 @@
 [hydrusnetwork/hydrus](https://github.com/hydrusnetwork/hydrus)にインポートするために
 JSONファイルをtxtファイルに変換するスクリプト
 
+## 動作環境
+python 3.6以上
+
 ## 使い方
 
 ## ある程度のテストはしていますが何が起こるかわかりませんので画像とJSONファイルのバックアップを必ずしておいてください。何が起こっても責任は取れません。
-
-## 動作環境
-python 3.6以上
 
 ### 1. Pixivutil2で画像をダウンロードする
 このときconfig.iniで`writeimagejson = True`としてください。
