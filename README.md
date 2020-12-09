@@ -11,7 +11,8 @@ JSONファイルをtxtファイルに変換するスクリプト
 ### 1. Pixivutil2で画像をダウンロードする
 このときconfig.iniで`writeimagejson = True`としてください。
 
-### 2. このレポジトリをクローンして（PixivUtil2ToHydrusNetworkの）config.iniにPixivUtil2で指定したダウンロードフォルダを入力する。
-### 3. CLI上で`python main.py`とする
+### 2. このレポジトリをクローンするかファイルをダウンロードして一つのフォルダに纏めておくなどしてください。そして（PixivUtil2ToHydrusNetworkの）config.iniにPixivUtil2でのダウンロードフォルダを入力する。
+### 3. CLI上で`python main.py`と入力する
+するとファイルの名前がずらずらと出てくるはずです。動いている証拠です。
 
 もしスクリプトが動かないという相談や、こうしてもらっては困るといった苦情、こうしたほうが良いなどの提案などあればご連絡ください。
