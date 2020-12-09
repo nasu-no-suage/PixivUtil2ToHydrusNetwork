@@ -81,7 +81,7 @@ class FileAggregator:
             json.dump(file_path_list, f, default=self.posix_path_default,indent=4)
 
     def posix_path_default(self,o):
-        if is_instance(o, pathlib.PosixPath):
+        if isinstance(o, pathlib.PosixPath):
             return str(o)
         raise TypeError(repr(o) + "is not JSON serializable")
 
