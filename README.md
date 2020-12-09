@@ -23,7 +23,7 @@ JSONファイルから画像ファイル一枚一枚ごとにタグの記載さ�
 このときconfig.iniで`writeimagejson = True`としてください。
 
 ### 2. このレポジトリをクローンするかファイルをダウンロードして一つのフォルダに纏めておくなどしてください。そして（PixivUtil2ToHydrusNetworkの）config.iniにPixivUtil2でのダウンロードフォルダを入力する。
-### 3. CLI上で`python main.py`と入力する
+### 3. CLI上で(Windows 10の場合PowerShellやcmd等)`python main.py`と入力する
 するとファイルの名前がずらずらと出ますが、これで正常に動いています。
 しばらく待つと画像ファイルにそれぞれタグが記載されたtxtファイルが出力されます。
 
