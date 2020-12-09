@@ -40,4 +40,5 @@ for pair_of_image_and_json in pairs_of_image_and_json:
     convert.read_json()
     convert.write_txt()
 
-file_list.write_converted()
+if record_converted:
+    file_list.write_converted()
