@@ -1,6 +1,6 @@
 from collections import defaultdict
+from pathlib import Path 
 import json
-import pathlib 
 import re
 import sys
 
@@ -65,7 +65,7 @@ class FileAggregator:
 
         return pairs_of_image_and_json
 
-    def load_converted(self):
+    def load_converted(self, record_converted):
         
         if record_converted == False:
             return []
@@ -78,29 +78,27 @@ class FileAggregator:
     def write_converted(self, record_converted):
         file_path_list = self.load_file_path_list()
         with open("converted_list.json", "w") as f:
-            json.dump(file_path_list, f, default=self.posix_path_default,indent=4)
-
-    def posix_path_default(self,o):
-        if isinstance(o, pathlib.PosixPath):
-            return str(o)
-        raise TypeError(repr(o) + "is not JSON serializable")
+            json.dump(list(map(str, file_path_list)), f, indent=4)
 
     def filter_out_converted(self, record_converted):
         '''
             exclude already converted file paths from loaded file list
             @param record_converted switch if you record a list of converted files
         '''
+        
         try:
-            converted_files = load_converted()
+            converted_files = self.load_converted(record_converted)
         except:
             converted_files = []
+
         converted_files_set = set(converted_files)
         files_set = set(self._file_paths)
 
         self._not_converted_files = files_set - converted_files_set
-    
-    def is_there_files(self, base_path):
-        if self._file_paths == [base_path]:
+        
+
+    def is_there_files(self,base_path):
+        if self._file_paths == [base_path] or self._not_converted_files == set():
             print("there's no new files")
             print("exiting...")
             exit()

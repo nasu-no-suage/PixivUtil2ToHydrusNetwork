@@ -15,11 +15,11 @@ record_converted = config['DEFAULT']['RecordConverted']
 print("now traversing directories...")
 file_list = FileAggregator(base_path)
 file_list.load_files()
-file_list.is_there_files(base_path)
 
 
 print("now loading pairs of image and json...")
 file_list.filter_out_converted(record_converted)
+file_list.is_there_files(base_path)
 pairs_of_image_and_json = file_list.pairs_image_and_json()
 
 
