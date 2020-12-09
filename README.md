@@ -12,8 +12,8 @@ JSONファイルから画像ファイル一枚一枚ごとにタグの記載さ�
 ## 動作環境
 - Arch Linux
 - Windows 10
+- python 3.6以上
 で動作確認
-python 3.6以上
 
 ## 使い方
 
