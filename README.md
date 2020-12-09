@@ -10,8 +10,9 @@ JSONファイルから画像ファイル一枚一枚ごとにタグの記載さ�
 "12345_p0 - sample.png.txt" または "12345_p0 - sample.jpg.txt"を作成
 
 ## 動作環境
-Arch Linux
-Windows 10で動作確認
+- Arch Linux
+- Windows 10
+で動作確認
 python 3.6以上
 
 ## 使い方
