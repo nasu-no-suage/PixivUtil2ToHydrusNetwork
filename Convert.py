@@ -112,7 +112,7 @@ class Convert:
              @param path as path object
         """
         self.json = self.get_json_path()
-        informations = self.json.read_text()
+        informations = self.json.read_text( encoding='utf-8')
         json_informations = json.loads(informations)
         self.get_artist(json_informations["Artist Name"])
         self.get_id_number(json_informations["Image ID"])
