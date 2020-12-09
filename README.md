@@ -4,10 +4,9 @@
 [hydrusnetwork/hydrus](https://github.com/hydrusnetwork/hydrus)にPixivサイト上で画像についているタグと関連付けてインポートするために
 JSONファイルから画像ファイル一枚一枚ごとにタグの記載されたtxtファイルを作成するスクリプト
 
-"12345_p0 - sample.png" または "12345_p0 - sample.jpg"と
-"12345_p0 - sample.json"
-から
-"12345_p0 - sample.png.txt" または "12345_p0 - sample.jpg.txt"を作成
+- "12345_p0 - sample.png" または "12345_p0 - sample.jpg"と
+- "12345_p0 - sample.json" から
+- "12345_p0 - sample.png.txt" または "12345_p0 - sample.jpg.txt"を作成
 
 ## 動作環境
 - Arch Linux
