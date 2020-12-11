@@ -5,7 +5,6 @@ from pathlib import Path
 from FileAggregator import FileAggregator
 from Convert import Convert
 
-
 config = configparser.ConfigParser()
     
 config.read('config.ini')
@@ -31,7 +30,7 @@ for pair_of_image_and_json in pairs_of_image_and_json:
     image_path = pair_of_image_and_json[0]
     json_path = pair_of_image_and_json[1]
 
-    #  if file-size is 0.This script stops siliently and files remained not converted.So raise Error and attention.
+    #  Check if there's no 0-sized file.If there is a 0-sized file,this script stops silently and rest of files remained not converted.
     if os.path.getsize(image_path) == 0 or os.path.getsize(json_path) == 0:
         print('this file-size is 0.aborting...')
         exit()
