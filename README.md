@@ -15,7 +15,7 @@ Generating
 
 ## Environment
 I tested on
-- Archlinux but would work on every distribution
+- Archlinux but would work on every distribution(Maybe on Mac)
 - Windows 10
 - python 3.6 or higher
 
